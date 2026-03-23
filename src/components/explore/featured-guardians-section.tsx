@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import type { FeaturedGuardian, GuardianProfile } from "@/types/domain";
 import { guardianTierBadgeVariant, guardianTierLabel } from "@/lib/guardian-tier-ui";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +12,8 @@ type Props = {
   guardians: GuardianProfile[];
 };
 
-export function FeaturedGuardiansSection({ featured, guardians }: Props) {
+export async function FeaturedGuardiansSection({ featured, guardians }: Props) {
+  const t = await getTranslations("Explore");
   const rows = featured
     .filter((f) => f.active)
     .sort((a, b) => b.priority - a.priority)
@@ -26,9 +28,9 @@ export function FeaturedGuardiansSection({ featured, guardians }: Props) {
   return (
     <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-6">
-        <h2 className="text-xl font-semibold tracking-tight">Featured Guardians</h2>
+        <h2 className="text-xl font-semibold tracking-tight">{t("featuredTitle")}</h2>
         <p className="text-muted-foreground mt-1 text-sm">
-          Trusted locals and seed partners — highlighted for quality, not pay-to-play ads.
+          {t("featuredLead")}
           {/* TODO(prod): `featured_guardians` table + admin scheduling + disclosure labels. */}
         </p>
       </div>
@@ -48,7 +50,7 @@ export function FeaturedGuardiansSection({ featured, guardians }: Props) {
                   </Badge>
                   {g.influencer_seed ? (
                     <Badge variant="secondary" className="text-[10px]">
-                      Seed partner
+                      {t("influencerSeed")}
                     </Badge>
                   ) : null}
                 </div>
@@ -57,24 +59,24 @@ export function FeaturedGuardiansSection({ featured, guardians }: Props) {
                   {g.avg_traveler_rating != null ? (
                     <span className="inline-flex items-center gap-1">
                       <Star className="text-primary size-3.5 fill-current" aria-hidden />
-                      {g.avg_traveler_rating.toFixed(1)} avg traveler rating
+                      {t("travelerAvgLine", { rating: g.avg_traveler_rating.toFixed(1) })}
                     </span>
                   ) : null}
-                  <span>{g.posts_approved_last_30d} posts / 30d</span>
+                  <span>{t("posts30dOnly", { count: g.posts_approved_last_30d })}</span>
                 </div>
                 <div className="mt-2 flex flex-wrap gap-1.5">
-                  {g.expertise_tags.slice(0, 4).map((t) => (
+                  {g.expertise_tags.slice(0, 4).map((tag) => (
                     <span
-                      key={t}
+                      key={tag}
                       className="bg-muted text-muted-foreground rounded-md px-2 py-0.5 text-[10px] font-medium"
                     >
-                      {t}
+                      {tag}
                     </span>
                   ))}
                 </div>
               </div>
               <Button asChild variant="outline" className="rounded-xl shrink-0">
-                <Link href={`/guardians#guardian-${g.user_id}`}>View profile</Link>
+                <Link href={`/guardians#guardian-${g.user_id}`}>{t("viewProfile")}</Link>
               </Button>
             </CardContent>
           </Card>

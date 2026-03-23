@@ -10,7 +10,7 @@ export function GuardianProfileSummaryCard({ profile }: { profile: GuardianProfi
   const complete = guardianProfileCompleteness(profile);
 
   return (
-    <Card className="border-border/80 shadow-sm">
+    <Card className="border-border/80 shadow-[var(--shadow-sm)] ring-1 ring-[color-mix(in_srgb,var(--brand-primary)_12%,transparent)]">
       <CardHeader className="space-y-3">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
@@ -42,7 +42,7 @@ export function GuardianProfileSummaryCard({ profile }: { profile: GuardianProfi
           <p className="text-muted-foreground text-xs font-medium uppercase tracking-wide">Introduction</p>
           <p className="text-foreground mt-1 leading-relaxed">{profile.bio}</p>
         </div>
-        <div className="rounded-xl border bg-muted/30 p-4">
+        <div className="rounded-xl border border-border/80 bg-gradient-to-br from-[var(--brand-trust-blue-soft)]/50 to-muted/25 p-4">
           <GuardianProgressRow label="Profile completeness" current={complete} target={100} suffix="%" />
           <p className="text-muted-foreground mt-3 text-xs leading-relaxed">
             {/* TODO(prod): Content management integration — sync bio, tags, and media from editor. */}

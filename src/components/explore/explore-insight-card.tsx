@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { ExploreInsight } from "@/lib/explore-utils";
 import { guardianTierBadgeVariant, guardianTierLabel } from "@/lib/guardian-tier-ui";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +16,7 @@ type Props = {
 };
 
 export function ExploreInsightCard({ insight, showRegion = true }: Props) {
+  const t = useTranslations("ExploreInsightCard");
   const { post, regionName, categoryName, authorTier, authorAvgRating, authorPosts30d, hasGuardianProfile } =
     insight;
 
@@ -26,8 +28,8 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
             {categoryName}
           </Badge>
           {post.featured ? (
-            <Badge variant="secondary" className="text-[10px]">
-              Featured pick
+            <Badge variant="featured" className="text-[10px]">
+              {t("featuredPick")}
             </Badge>
           ) : null}
           {post.status !== "approved" ? (
@@ -57,27 +59,29 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
                 </Badge>
               ) : (
                 <Badge variant="outline" className="text-[10px]">
-                  Contributor
+                  {t("contributor")}
                 </Badge>
               )}
             </div>
             <div className="text-muted-foreground flex flex-wrap gap-x-3 text-[11px]">
-              {authorPosts30d != null ? <span>{authorPosts30d} approved / 30d</span> : null}
+              {authorPosts30d != null ? (
+                <span>{t("approved30d", { count: authorPosts30d })}</span>
+              ) : null}
               {authorAvgRating != null ? (
                 <span className="inline-flex items-center gap-0.5">
                   <Star className="text-primary size-3 fill-current" aria-hidden />
-                  {authorAvgRating.toFixed(1)} traveler avg
+                  {t("travelerAvg", { rating: authorAvgRating.toFixed(1) })}
                 </span>
               ) : null}
             </div>
             {insight.authorExpertiseTags.length > 0 ? (
               <div className="flex flex-wrap gap-1 pt-1">
-                {insight.authorExpertiseTags.slice(0, 4).map((t) => (
+                {insight.authorExpertiseTags.slice(0, 4).map((tag) => (
                   <span
-                    key={t}
+                    key={tag}
                     className="bg-primary/5 text-primary rounded px-1.5 py-0.5 text-[10px] font-medium"
                   >
-                    {t}
+                    {tag}
                   </span>
                 ))}
               </div>
@@ -86,9 +90,9 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
         </div>
         {post.tags.length > 0 ? (
           <div className="flex flex-wrap gap-1.5">
-            {post.tags.map((t) => (
-              <span key={t} className="text-muted-foreground text-[10px]">
-                #{t}
+            {post.tags.map((tag) => (
+              <span key={tag} className="text-muted-foreground text-[10px]">
+                #{tag}
               </span>
             ))}
           </div>
@@ -97,16 +101,16 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
           {post.helpful_rating != null ? (
             <span className="inline-flex items-center gap-1">
               <ThumbsUp className="size-3.5" aria-hidden />
-              {post.helpful_rating.toFixed(1)} helpful
+              {t("helpful", { rating: post.helpful_rating.toFixed(1) })}
             </span>
           ) : null}
           <span className="inline-flex items-center gap-1">
             <ThumbsUp className="size-3.5 opacity-60" aria-hidden />
-            {post.usefulness_votes} found this useful
+            {t("usefulVotes", { count: post.usefulness_votes })}
           </span>
         </div>
       </CardContent>
-      <CardFooter className="mt-auto flex flex-wrap items-center justify-between gap-2 border-t bg-muted/20 px-4 py-3">
+      <CardFooter className="from-[var(--brand-primary-soft)]/25 to-[var(--brand-trust-blue-soft)]/20 mt-auto flex flex-wrap items-center justify-between gap-2 border-t border-border/70 bg-gradient-to-r px-4 py-3">
         <div className="flex gap-1">
           <Button
             type="button"
@@ -114,10 +118,10 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
             size="icon-sm"
             className="rounded-lg"
             disabled
-            title="Bookmarks — TODO(prod): Supabase + RLS per user"
+            title={t("bookmarkTodo")}
           >
             <Bookmark className="size-4" />
-            <span className="sr-only">Bookmark</span>
+            <span className="sr-only">{t("bookmark")}</span>
           </Button>
           <Button
             type="button"
@@ -125,23 +129,29 @@ export function ExploreInsightCard({ insight, showRegion = true }: Props) {
             size="icon-sm"
             className="rounded-lg"
             disabled
-            title="Share — TODO(prod): Web Share API + OG URLs"
+            title={t("shareTodo")}
           >
             <Share2 className="size-4" />
-            <span className="sr-only">Share</span>
+            <span className="sr-only">{t("share")}</span>
           </Button>
         </div>
         {hasGuardianProfile ? (
           <Button asChild size="sm" variant="outline" className="rounded-lg">
-            <Link href={`/guardians#guardian-${post.author_user_id}`}>Guardian</Link>
+            <Link href={`/guardians#guardian-${post.author_user_id}`}>{t("guardian")}</Link>
           </Button>
         ) : (
-          <Button size="sm" variant="outline" className="rounded-lg" disabled title="Community contributor">
-            Contributor
+          <Button
+            size="sm"
+            variant="outline"
+            className="rounded-lg"
+            disabled
+            title={t("contributorHint")}
+          >
+            {t("contributor")}
           </Button>
         )}
         <Button asChild size="sm" className="rounded-lg">
-          <Link href="/book">Book support</Link>
+          <Link href="/book">{t("bookSupport")}</Link>
         </Button>
       </CardFooter>
     </Card>

@@ -1,0 +1,224 @@
+{
+  "Nav": {
+    "explore": "探索",
+    "guardians": "Guardian",
+    "services": "サービス",
+    "book": "予約",
+    "contribute": "参加する"
+  },
+  "Header": {
+    "logIn": "ログイン",
+    "bookSupport": "サポートを依頼",
+    "openMenu": "メニューを開く",
+    "menu": "メニュー"
+  },
+  "LanguageSwitcher": {
+    "label": "言語",
+    "en": "EN",
+    "ko": "KO",
+    "ja": "JA"
+  },
+  "Footer": {
+    "product": "プロダクト",
+    "guardians": "Guardian",
+    "operations": "運用",
+    "apply": "応募",
+    "dashboard": "ダッシュボード",
+    "admin": "管理",
+    "disclaimer": "同伴・実務サポートに限定され、医療・法律・緊急対応ではありません。24時間の保護や安全の保証は行いません。Korea SafeMateの利用により、これらの限界に同意したものとみなされます。"
+  },
+  "Brand": {
+    "tagline": "ローカル情報 · Guardianコミュニティ · 安心サポート",
+    "description": "地域別にモデレートされた実用情報、段階が明確なGuardianコミュニティ、運用がゲートを持つ現地サポートのマッチングを組み合わせます。一般的な観光マーケや無秩序なフォーラムではありません。"
+  },
+  "Home": {
+    "metaTitle": "ホーム",
+    "metaDescription": "Korea SafeMate — 信頼できるローカル情報と範囲の明確な現地サポート。地域、Guardian、手配まで。",
+    "eyebrow": "韓国 · 入国とローカル探索",
+    "heroTitle": "信頼できるローカル情報と、落ち着いた範囲明確なサポート。",
+    "heroLead": "{brand}は、地域ごとに検証されたインサイト、相互レビュー付きの段階型Guardianコミュニティ、実務に沿ったマッチングを組み合わせます。訪韓の方も国内旅行の方も対象で、フォーラムの垂れ流しや画一的な観光商品とは一線を画します。",
+    "exploreRegions": "地域を見る",
+    "bookSupport": "サポートを依頼",
+    "services": "サービス",
+    "scopeNote": "緊急・医療・法律のアドバイスではありません。予約前に範囲と除外事項を案内します。",
+    "layersTitle": "三層構造、ひとつのプラットフォーム",
+    "layersLead": "情報はオープンな参加、マッチングは別途検証、MVPでは外部チャットで連携 — 煽りより明確さを優先します。",
+    "layer1Title": "ローカル旅行インテリジェンス",
+    "layer1Body": "地域単位のヒント、話題の場所、到着直後の実務 — 具体的で、品質はモデレートされます。",
+    "layer2Title": "Guardianコミュニティと評判",
+    "layer2Body": "ルールのあるオープンな貢献。活動と相互レビューは、マッチング資格とは切り離したシグナルになります。",
+    "layer3Title": "安全な同伴マッチング",
+    "layer3Body": "審査済みGuardianのみ。初期調整は外部チャットのハンドオフで — アプリ内フルチャットのMVPはありません。",
+    "sessionsTitle": "サポートセッション",
+    "sessionsLead": "到着同伴、Kルート実行、初日の適応 — ライセンスツアー解説ではなく、範囲がはっきりした実務サポートです。",
+    "startBooking": "予約を始める →",
+    "ctaTitle": "初日の負担を減らす準備はできていますか？",
+    "ctaLead": "到着枠とニーズをお知らせください。リクエストはチームが確認し、都合が合えばGuardianをマッチングします。",
+    "bookNow": "今すぐ依頼"
+  },
+  "Services": {
+    "metaTitle": "サービス",
+    "metaDescription": "ソウル圏を想定した到着同伴、Kルート、初日24時間の実務サポート。",
+    "title": "同伴・実務サポート",
+    "intro": "範囲が定まったサポートセッションです。表示価格はMVP計画用の目安で、距離・時間帯により最終見積もりは変わる場合があります。",
+    "fromPrice": "{price}〜",
+    "selectBook": "選んで依頼",
+    "durationBadge": "約{hours}時間",
+    "cards": {
+      "arrival": {
+        "title": "到着同伴",
+        "shortDescription": "空港・駅から宿まで — 交通の基本とチェックインをサポートします。",
+        "bullets": [
+          "空港・主要駅から宿泊先まで",
+          "交通系IC・SIMの基本と初動の移動",
+          "チェックイン補助と簡単な現地セットアップ"
+        ]
+      },
+      "k_route": {
+        "title": "Kルート同伴",
+        "shortDescription": "自分で選んだKコンテンツ・買い物ルートの実行支援 — 観光ガイド業ではありません。",
+        "bullets": [
+          "自分で選んだKコンテンツ・買い物ルートの実行",
+          "チケット・列・注文・道案内などの実務",
+          "台本型の観光解説ではない実用的ヘルプ"
+        ]
+      },
+      "first_24h": {
+        "title": "初日24時間",
+        "shortDescription": "初日の適応 — アプリ・公共交通・デリバリー注文と、現実的な範囲の定着支援。",
+        "bullets": [
+          "韓国初日の適応",
+          "アプリ・公共交通・デリバリー注文の基本",
+          "現実的な範囲での定着サポート"
+        ]
+      }
+    }
+  },
+  "Explore": {
+    "metaTitle": "探索",
+    "metaDescription": "地域別のローカル情報 — モデレートされ、実務的でGuardian起点。",
+    "eyebrow": "探索",
+    "heroTitle": "予約前に使える、本物のローカル情報",
+    "heroDescription": "Exploreは「判断に使う」情報のための場所です。行列の長い店、Kコンテンツの現地実行、買い物のコツ、到着の実務など。多くは段階と貢献履歴が見えるGuardian由来です — 一般的なブログやオープンフォーラムではありません。",
+    "heroNote": "日本語・英語の読者の両方を想定した実用コンテンツを目指します。機械翻訳ではなく、Guardian検証に近い明瞭さを重視します。",
+    "jumpIntel": "インサイトへ",
+    "bookSupport": "サポートを依頼",
+    "regionSectionTitle": "地域から見る",
+    "regionSectionLead": "フェーズ1は大都市圏中心 — フェーズ2の目的地拡張に備えた構造です。",
+    "phase": "フェーズ {n}",
+    "openHub": "ハブを開く",
+    "jumpToIntel": "インサイトへ",
+    "featuredTitle": "注目のGuardian",
+    "featuredLead": "信頼できるローカル・シードパートナー — 有料広告ではなく品質基準で掲載します。",
+    "viewProfile": "プロフィール",
+    "influencerSeed": "シードパートナー",
+    "ctaTitle": "次の一歩へ進みますか？",
+    "ctaLead": "まず情報を読み、範囲のはっきりしたサポートを依頼するか、Guardianとして貢献を始められます。",
+    "becomeGuardian": "Guardianに応募",
+    "guardianProfiles": "Guardian一覧",
+    "backToExplore": "← 探索トップ",
+    "bookInArea": "このエリアでサポートを依頼",
+    "contributeIntel": "情報を投稿する",
+    "backLink": "探索に戻る",
+    "allRegions": "← すべての地域",
+    "regionHubTagsTitle": "このハブのタグ・トピック",
+    "regionHubTagsLead": "下の投稿を絞り込めます — 全国の探索ビューと同じカテゴリです。",
+    "moderationPreviewTitle": "モデレーション中（プレビュー）",
+    "moderationPreviewLead": "運用確認用です — 旅行者には通常、承認済みの投稿のみ表示されます。",
+    "regionGuardiansTitle": "この地域のGuardianハイライト",
+    "regionGuardiansLead": "アクティブ・検証ティアは貢献と別プロセスの確認を反映します。",
+    "fullProfile": "プロフィールを見る",
+    "posts30dOnly": "30日で{count}件",
+    "travelerAvgLine": "旅行者平均 {rating}"
+  },
+  "Book": {
+    "metaTitle": "予約",
+    "metaDescription": "信頼できるローカルサポートを依頼 — マッチング前に確認されます。",
+    "eyebrow": "サポート依頼",
+    "title": "信頼できるローカルサポートを依頼",
+    "intro": "ワンクリックツアー予約ではなく、落ち着いた構造化された申し込みです。正確な状況を共有いただくと、慎重にマッチングします。外部チャットは、チームが範囲とGuardianの適合を承認した後にのみ案内します。",
+    "loading": "読み込み中…"
+  },
+  "TrustScope": {
+    "title": "サービス範囲と境界",
+    "lead": "Korea SafeMateは実務的な同伴・サポートに焦点を当てます。許認可ツアー事業者・医療・法律・緊急サービスではなく、結果や安全について「全面的な責任」を保証するものではありません。",
+    "includedLabel": "一般的に含まれるもの",
+    "excludedLabel": "含まれないもの",
+    "included": [
+      "地域別にキュレーションされた情報とモデレートされた投稿",
+      "貢献と相互レビューに基づくGuardianの評判",
+      "範囲が明確な実務同伴（到着・ルート・初日帯）",
+      "マッチング後の外部チャットハンドオフ（Telegram、KakaoTalk、WhatsApp など）"
+    ],
+    "excluded": [
+      "パンフレット型マーケや無モデレートのフォーラム",
+      "投稿数だけで自動付与されるマッチング特権",
+      "医療・法律・緊急対応を謳うサービス",
+      "MVPでは自社リアルタイムチャット（外部チャネル利用）"
+    ]
+  },
+  "BookingSuccess": {
+    "title": "リクエストを受け付けました",
+    "body": "ありがとうございます。チームが状況と空き状況を確認します。まだGuardianや外部チャットには接続されていません。マッチングの準備ができ次第、{email} 宛に次のステップをご連絡します。",
+    "bodyNoEmail": "ありがとうございます。チームが状況と空き状況を確認します。まだGuardianや外部チャットには接続されていません。マッチングの準備ができ次第、ご連絡します。",
+    "reference": "参照番号:",
+    "mvpNote": "（MVP：データベース未保存 — Supabase 設定が必要です）",
+    "service": "サービス:",
+    "handoff": "連絡チャネル:",
+    "summaryUnavailableTitle": "概要を表示できません",
+    "summaryUnavailableBody": "送信直後に同じブラウザで開くか、サポート用に参照番号を控えてください。",
+    "summaryUnavailableHint": "再読み込みや別端末の場合、詳細は端末側に残りません。",
+    "exploreIntel": "ローカル情報を見る",
+    "services": "サービス",
+    "home": "ホーム"
+  },
+  "Login": {
+    "metaTitle": "ログイン",
+    "title": "ログイン",
+    "description": "このMVPでは認証は未接続です。公開ページと各ロールのダッシュボードはUIプレビュー用です。",
+    "continueEmail": "メールで続行（近日）",
+    "browseExplore": "Exploreを見る",
+    "continueBooking": "予約フローへ",
+    "previewGuardian": "Guardianダッシュボードをプレビュー",
+    "previewAdmin": "管理コンソールをプレビュー"
+  },
+  "GuardiansPage": {
+    "metaTitle": "Guardian",
+    "metaDescription": "段階・評判・注目ローカル — 誰でも貢献できますが、それだけでマッチングの信頼が保証されるわけではありません。",
+    "startContributing": "貢献を始める",
+    "requestSupport": "マッチングサポートを依頼"
+  },
+  "ExploreDiscovery": {
+    "sectionTitle": "ローカルインサイトを探す",
+    "sectionLead": "カテゴリと地域で整理 — フィードのノイズではなく有用性重視でモデレートします。",
+    "featuredPicks": "おすすめピック",
+    "category": "カテゴリ",
+    "region": "地域",
+    "sort": "並び替え",
+    "all": "すべて",
+    "allRegions": "すべての地域",
+    "sortRecommended": "おすすめ",
+    "sortLatest": "最新",
+    "sortPopular": "人気",
+    "emptyFilters": "条件に合う投稿がありません。カテゴリや地域を変えてみてください。"
+  },
+  "ExploreInsightCard": {
+    "bookSupport": "サポートを依頼",
+    "featuredPick": "おすすめ",
+    "contributor": "コントリビューター",
+    "guardian": "Guardian",
+    "approved30d": "30日間承認 {count}",
+    "travelerAvg": "旅行者平均 {rating}",
+    "helpful": "役立った {rating}",
+    "usefulVotes": "役に立ったと回答 {count}",
+    "bookmark": "ブックマーク",
+    "share": "共有",
+    "contributorHint": "コミュニティ投稿者",
+    "bookmarkTodo": "ブックマーク — TODO(prod): Supabase + RLS",
+    "shareTodo": "共有 — TODO(prod): Web Share API + OG URL"
+  },
+  "GuardianDashboard": {
+    "homePublic": "ホーム",
+    "viewGuardians": "公開Guardianの文脈を見る"
+  }
+}

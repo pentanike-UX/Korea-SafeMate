@@ -42,10 +42,12 @@ export function GuardianDashboardView({
   return (
     <div className="space-y-10 pb-12">
       <header className="space-y-3">
-        <p className="text-primary text-xs font-semibold tracking-widest uppercase">Guardian workspace</p>
+        <p className="text-primary text-xs font-semibold tracking-widest uppercase drop-shadow-[0_0_12px_color-mix(in_srgb,var(--brand-primary)_25%,transparent)]">
+          Guardian workspace
+        </p>
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <h1 className="text-foreground text-3xl font-semibold tracking-tight">Dashboard</h1>
+            <h1 className="text-text-strong text-3xl font-semibold tracking-tight">Dashboard</h1>
             <p className="text-muted-foreground mt-2 max-w-2xl text-sm leading-relaxed">
               {/* TODO(prod): Supabase auth role check — only contributor / guardian roles; hydrate from session. */}
               Your view is grouped the same way operations runs the platform:{" "}

@@ -9,16 +9,19 @@ const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground [a]:hover:bg-primary/80",
+        default: "bg-primary text-primary-foreground [a]:hover:bg-[var(--brand-primary-hover)]",
         secondary:
-          "bg-secondary text-secondary-foreground [a]:hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground [a]:hover:bg-[color-mix(in_srgb,var(--brand-primary-soft)_88%,var(--brand-primary)_12%)]",
+        trust: "bg-[var(--badge-trust-bg)] text-[var(--badge-trust-text)] [a]:hover:brightness-[0.97]",
+        featured:
+          "bg-[var(--badge-featured-bg)] text-[var(--badge-featured-text)] ring-1 ring-[color-mix(in_srgb,var(--brand-primary)_18%,transparent)] [a]:hover:brightness-[0.98]",
         destructive:
           "bg-destructive/10 text-destructive focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:focus-visible:ring-destructive/40 [a]:hover:bg-destructive/20",
         outline:
           "border-border text-foreground [a]:hover:bg-muted [a]:hover:text-muted-foreground",
         ghost:
           "hover:bg-muted hover:text-muted-foreground dark:hover:bg-muted/50",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-primary underline-offset-4 hover:underline hover:text-[var(--link-hover)]",
       },
     },
     defaultVariants: {

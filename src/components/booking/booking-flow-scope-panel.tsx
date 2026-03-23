@@ -5,7 +5,7 @@ import { Check, Shield, X } from "lucide-react";
 /** Booking-flow copy: process expectations + scope (not a tour marketplace). */
 export function BookingFlowScopePanel() {
   return (
-    <Card className="border-primary/15 bg-card/90 shadow-sm">
+    <Card className="border-primary/15 border-t-[3px] border-t-[var(--brand-trust-blue)] bg-card/90 shadow-[var(--shadow-sm)]">
       <CardHeader className="pb-2">
         <div className="flex items-start gap-2">
           <Shield className="text-primary mt-0.5 size-5 shrink-0" aria-hidden />

@@ -39,7 +39,7 @@ export function GuardianReviewsTrustModule({
     trustHealth === "strong" ? "Strong" : trustHealth === "good" ? "Stable" : "Needs attention";
 
   return (
-    <Card className="border-border/80 shadow-sm">
+    <Card className="border-border/80 shadow-[var(--shadow-sm)] ring-1 ring-[color-mix(in_srgb,var(--brand-trust-blue)_18%,transparent)]">
       <CardHeader>
         <CardTitle className="text-lg font-semibold tracking-tight">Reviews & trust</CardTitle>
         <CardDescription className="text-sm leading-relaxed">

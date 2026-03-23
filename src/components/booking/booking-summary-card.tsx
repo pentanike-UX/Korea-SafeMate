@@ -26,7 +26,7 @@ export function BookingSummaryCard({ payload }: Props) {
   const handoff = HANDOFF_CHANNEL_OPTIONS.find((h) => h.value === payload.preferred_contact_channel);
 
   return (
-    <Card className="border-primary/10">
+    <Card className="border-primary/10 shadow-[var(--shadow-sm)] ring-1 ring-[color-mix(in_srgb,var(--brand-primary)_10%,transparent)]">
       <CardHeader>
         <CardTitle className="text-lg">Request summary</CardTitle>
       </CardHeader>

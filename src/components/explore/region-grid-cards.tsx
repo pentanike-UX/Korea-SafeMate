@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import type { Region } from "@/types/domain";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -7,7 +8,8 @@ import { MapPin } from "lucide-react";
 
 type Props = { regions: Region[] };
 
-export function RegionGridCards({ regions }: Props) {
+export async function RegionGridCards({ regions }: Props) {
+  const t = await getTranslations("Explore");
   const sorted = [...regions].sort((a, b) => {
     if (a.phase !== b.phase) return a.phase - b.phase;
     return a.name.localeCompare(b.name);
@@ -17,9 +19,9 @@ export function RegionGridCards({ regions }: Props) {
     <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h2 className="text-xl font-semibold tracking-tight">Browse by region</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{t("regionSectionTitle")}</h2>
           <p className="text-muted-foreground mt-1 text-sm">
-            Phase 1 metros first — structure ready for Phase 2 destinations.
+            {t("regionSectionLead")}
             {/* TODO(prod): `regions` from Supabase with `phase` and geo bounds. */}
           </p>
         </div>
@@ -42,17 +44,17 @@ export function RegionGridCards({ regions }: Props) {
                   </div>
                 </div>
                 <Badge variant={r.phase === 1 ? "default" : "secondary"} className="shrink-0">
-                  Phase {r.phase}
+                  {t("phase", { n: r.phase })}
                 </Badge>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">{r.short_description}</p>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               <Button asChild className="rounded-xl">
-                <Link href={`/explore/${r.slug}`}>Open hub</Link>
+                <Link href={`/explore/${r.slug}`}>{t("openHub")}</Link>
               </Button>
               <Button asChild variant="outline" className="rounded-xl">
-                <Link href={`/explore/${r.slug}#intel`}>Jump to intel</Link>
+                <Link href={`/explore/${r.slug}#intel`}>{t("jumpToIntel")}</Link>
               </Button>
             </CardContent>
           </Card>

@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import {
   mockContentCategories,
@@ -14,8 +15,9 @@ import { ExploreRegionGuardians } from "@/components/explore/explore-region-guar
 import { ExploreRegionHero } from "@/components/explore/explore-region-hero";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { BRAND } from "@/lib/constants";
 
-type Props = { params: Promise<{ region: string }> };
+type Props = { params: Promise<{ locale: string; region: string }> };
 
 export function generateStaticParams() {
   return mockRegions.map((r) => ({ region: r.slug }));
@@ -24,13 +26,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { region } = await params;
   const r = mockRegions.find((x) => x.slug === region);
+  const t = await getTranslations("Explore");
   return {
-    title: r ? `${r.name} · Explore` : "Region",
+    title: r ? `${r.name} · ${t("metaTitle")} | ${BRAND.name}` : `Region | ${BRAND.name}`,
   };
 }
 
 export default async function ExploreRegionPage({ params }: Props) {
   const { region } = await params;
+  const t = await getTranslations("Explore");
   const meta = mockRegions.find((r) => r.slug === region);
   if (!meta) notFound();
 
@@ -55,10 +59,8 @@ export default async function ExploreRegionPage({ params }: Props) {
       <section className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
         <Card className="border-primary/10 bg-muted/20">
           <CardHeader className="pb-2">
-            <CardTitle className="text-base">Tags & topics in this hub</CardTitle>
-            <CardDescription>
-              Filter posts below — same categories as the national Explore view.
-            </CardDescription>
+            <CardTitle className="text-base">{t("regionHubTagsTitle")}</CardTitle>
+            <CardDescription>{t("regionHubTagsLead")}</CardDescription>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
             {mockContentCategories.map((c) => (
@@ -82,9 +84,9 @@ export default async function ExploreRegionPage({ params }: Props) {
 
       {pendingInsights.length > 0 ? (
         <section className="mx-auto max-w-6xl border-t px-4 py-10 sm:px-6">
-          <h2 className="text-lg font-semibold">In moderation (preview)</h2>
+          <h2 className="text-lg font-semibold">{t("moderationPreviewTitle")}</h2>
           <p className="text-muted-foreground mt-1 text-sm">
-            Shown for ops alignment — travelers normally see approved posts only.
+            {t("moderationPreviewLead")}
             {/* TODO(prod): Remove from public build or gate behind `admin` role. */}
           </p>
           <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -97,7 +99,7 @@ export default async function ExploreRegionPage({ params }: Props) {
 
       <div className="mx-auto max-w-6xl px-4 pb-12 sm:px-6">
         <Link href="/explore" className="text-primary text-sm font-medium hover:underline">
-          ← All regions
+          {t("allRegions")}
         </Link>
       </div>
     </>

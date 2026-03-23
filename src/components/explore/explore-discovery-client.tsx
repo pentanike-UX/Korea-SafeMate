@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useMemo, useState } from "react";
 import type { ContentCategory, ExploreSortMode, Region } from "@/types/domain";
 import type { ExploreInsight } from "@/lib/explore-utils";
@@ -30,6 +31,7 @@ export function ExploreDiscoveryClient({
   showFeaturedRow = false,
   sectionId = "intel",
 }: Props) {
+  const t = useTranslations("ExploreDiscovery");
   const [categorySlug, setCategorySlug] = useState<string | null>(null);
   const [regionSlug, setRegionSlug] = useState<string | null>(null);
   const [sort, setSort] = useState<ExploreSortMode>("recommended");
@@ -46,13 +48,19 @@ export function ExploreDiscoveryClient({
     return sortInsights(list, sort);
   }, [allInsights, categorySlug, regionSlug, regions, sort]);
 
+  const sortOptions = [
+    ["recommended", t("sortRecommended")] as const,
+    ["latest", t("sortLatest")] as const,
+    ["popular", t("sortPopular")] as const,
+  ];
+
   return (
     <section id={sectionId} className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
       <div className="mb-8 flex flex-col gap-6">
         <div>
-          <h2 className="text-xl font-semibold tracking-tight">Discover local intel</h2>
+          <h2 className="text-xl font-semibold tracking-tight">{t("sectionTitle")}</h2>
           <p className="text-muted-foreground mt-1 text-sm">
-            Structured by category and region — moderated for usefulness, not feed noise.
+            {t("sectionLead")}
             {/* TODO(prod): Full-text search, facets, and saved filters. */}
           </p>
         </div>
@@ -60,7 +68,7 @@ export function ExploreDiscoveryClient({
         {showFeaturedRow && featuredPicks.length > 0 ? (
           <div>
             <p className="text-foreground text-xs font-semibold uppercase tracking-wide">
-              Featured picks
+              {t("featuredPicks")}
             </p>
             <div className="mt-3 grid gap-4 md:grid-cols-3">
               {featuredPicks.map((insight) => (
@@ -72,7 +80,7 @@ export function ExploreDiscoveryClient({
 
         <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
           <div className="min-w-0 flex-1 space-y-3">
-            <p className="text-foreground text-xs font-semibold uppercase tracking-wide">Category</p>
+            <p className="text-foreground text-xs font-semibold uppercase tracking-wide">{t("category")}</p>
             <div className="flex flex-wrap gap-2">
               <Button
                 type="button"
@@ -81,7 +89,7 @@ export function ExploreDiscoveryClient({
                 className="rounded-full"
                 onClick={() => setCategorySlug(null)}
               >
-                All
+                {t("all")}
               </Button>
               {categories.map((c) => (
                 <Button
@@ -100,7 +108,7 @@ export function ExploreDiscoveryClient({
 
           {regions ? (
             <div className="min-w-0 flex-1 space-y-3 lg:max-w-md">
-              <p className="text-foreground text-xs font-semibold uppercase tracking-wide">Region</p>
+              <p className="text-foreground text-xs font-semibold uppercase tracking-wide">{t("region")}</p>
               <div className="flex flex-wrap gap-2">
                 <Button
                   type="button"
@@ -109,7 +117,7 @@ export function ExploreDiscoveryClient({
                   className="rounded-full"
                   onClick={() => setRegionSlug(null)}
                 >
-                  All regions
+                  {t("allRegions")}
                 </Button>
                 {regions.map((r) => (
                   <Button
@@ -129,15 +137,9 @@ export function ExploreDiscoveryClient({
         </div>
 
         <div>
-          <p className="text-foreground text-xs font-semibold uppercase tracking-wide">Sort</p>
+          <p className="text-foreground text-xs font-semibold uppercase tracking-wide">{t("sort")}</p>
           <div className="mt-2 inline-flex rounded-lg border bg-muted/30 p-1">
-            {(
-              [
-                ["recommended", "Recommended"],
-                ["latest", "Latest"],
-                ["popular", "Popular"],
-              ] as const
-            ).map(([key, label]) => (
+            {sortOptions.map(([key, label]) => (
               <button
                 key={key}
                 type="button"
@@ -157,9 +159,7 @@ export function ExploreDiscoveryClient({
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-muted-foreground py-12 text-center text-sm">
-          No posts match these filters. Try another category or region.
-        </p>
+        <p className="text-muted-foreground py-12 text-center text-sm">{t("emptyFilters")}</p>
       ) : (
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {filtered.map((insight) => (

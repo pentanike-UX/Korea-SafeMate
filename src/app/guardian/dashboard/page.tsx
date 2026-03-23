@@ -1,3 +1,4 @@
+/* TODO(i18n): Keep English-first for now; add locale routing or cookie-based messages when localizing Guardian dashboard. */
 import {
   getGuardianDashboardSnapshot,
   mockBookings,

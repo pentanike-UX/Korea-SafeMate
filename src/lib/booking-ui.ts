@@ -45,12 +45,12 @@ export function guardianApprovalLabel(s: GuardianApprovalStatus): string {
 
 export function guardianApprovalVariant(
   s: GuardianApprovalStatus,
-): "default" | "secondary" | "outline" | "destructive" {
+): "default" | "secondary" | "trust" | "outline" | "destructive" {
   switch (s) {
     case "approved":
       return "default";
     case "under_review":
-      return "secondary";
+      return "trust";
     case "rejected":
       return "destructive";
     default:

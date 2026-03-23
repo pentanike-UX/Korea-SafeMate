@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 type OpsSystem = "content" | "trust" | "bookings";
 
 const ACCENT: Record<OpsSystem, string> = {
-  content: "border-l-emerald-600/70 dark:border-l-emerald-500/60",
-  trust: "border-l-violet-600/70 dark:border-l-violet-500/60",
-  bookings: "border-l-sky-600/70 dark:border-l-sky-500/60",
+  content: "border-l-[var(--success)]",
+  trust: "border-l-[var(--brand-trust-blue)]",
+  bookings: "border-l-[var(--accent-purple-blue)]",
 };
 
 export function GuardianDashboardLane({
@@ -24,7 +24,7 @@ export function GuardianDashboardLane({
   return (
     <section
       className={cn(
-        "border-border/80 bg-card/40 rounded-2xl border border-l-4 shadow-sm backdrop-blur-[2px]",
+        "border-border/80 from-card/90 to-[var(--brand-primary-soft)]/15 rounded-2xl border border-l-4 bg-gradient-to-br shadow-[var(--shadow-sm)] backdrop-blur-[2px]",
         ACCENT[system],
         className,
       )}

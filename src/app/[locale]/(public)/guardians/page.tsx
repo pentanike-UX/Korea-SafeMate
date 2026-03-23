@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import {
   mockContactMethods,
   mockFeaturedGuardians,
@@ -9,18 +10,22 @@ import { guardianApprovalLabel, guardianApprovalVariant } from "@/lib/booking-ui
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CONTACT_CHANNEL_LABELS } from "@/lib/constants";
+import { BRAND, CONTACT_CHANNEL_LABELS } from "@/lib/constants";
 
-export const metadata = {
-  title: "Guardians | Korea SafeMate",
-  description: "Tiers, reputation, and featured locals — open participation ≠ trusted matching.",
-};
+export async function generateMetadata() {
+  const t = await getTranslations("GuardiansPage");
+  return {
+    title: `${t("metaTitle")} | ${BRAND.name}`,
+    description: t("metaDescription"),
+  };
+}
 
 function contactFor(guardianId: string) {
   return mockContactMethods.filter((c) => c.user_id === guardianId);
 }
 
-export default function GuardiansPage() {
+export default async function GuardiansPage() {
+  const t = await getTranslations("GuardiansPage");
   const featuredIds = new Set(
     mockFeaturedGuardians.filter((f) => f.active).map((f) => f.guardian_user_id),
   );
@@ -32,6 +37,7 @@ export default function GuardiansPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
+      {/* TODO(i18n): Localize headings, directory labels, and in-card copy — messages/GuardiansPage. */}
       <div className="max-w-2xl">
         <h1 className="text-3xl font-semibold tracking-tight">Guardian community</h1>
         <p className="text-muted-foreground mt-3 text-sm leading-relaxed sm:text-base">
@@ -140,10 +146,10 @@ export default function GuardiansPage() {
 
       <div className="mt-12 flex flex-wrap gap-3">
         <Button asChild className="rounded-xl">
-          <Link href="/guardians/apply">Start contributing</Link>
+          <Link href="/guardians/apply">{t("startContributing")}</Link>
         </Button>
         <Button asChild variant="outline" className="rounded-xl">
-          <Link href="/book">Request matched support</Link>
+          <Link href="/book">{t("requestSupport")}</Link>
         </Button>
       </div>
     </div>

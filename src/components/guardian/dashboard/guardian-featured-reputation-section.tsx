@@ -19,7 +19,7 @@ export function GuardianFeaturedReputationSection({
         <div className="flex flex-wrap items-center gap-2">
           <CardTitle className="text-lg font-semibold tracking-tight">Featured & reputation</CardTitle>
           {profile.featured ? (
-            <Badge variant="secondary" className="font-medium">
+            <Badge variant="featured" className="font-medium">
               Featured guardian
             </Badge>
           ) : null}
@@ -34,7 +34,7 @@ export function GuardianFeaturedReputationSection({
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6 text-sm">
-        <div className="rounded-xl border border-dashed bg-gradient-to-br from-primary/5 via-transparent to-muted/30 p-5">
+        <div className="rounded-xl border border-dashed border-[color-mix(in_srgb,var(--brand-primary)_28%,var(--border-default))] bg-gradient-to-br from-[var(--brand-primary-soft)]/80 via-[var(--brand-trust-blue-soft)]/40 to-muted/20 p-5 shadow-[var(--shadow-sm)]">
           <p className="text-foreground font-semibold">{snapshot.featured_spotlight.headline}</p>
           <p className="text-muted-foreground mt-2 text-xs leading-relaxed">{snapshot.featured_spotlight.body}</p>
           <div className="mt-4 flex flex-wrap gap-2">

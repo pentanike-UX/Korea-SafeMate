@@ -1,9 +1,12 @@
-import { getTranslations } from "next-intl/server";
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, X } from "lucide-react";
 
-export async function TrustBoundaryCard() {
-  const t = await getTranslations("TrustScope");
+/** Client copy of {@link TrustBoundaryCard} for use inside client flows (e.g. booking wizard). */
+export function TrustBoundaryCardClient() {
+  const t = useTranslations("TrustScope");
   const included = t.raw("included") as string[];
   const excluded = t.raw("excluded") as string[];
 

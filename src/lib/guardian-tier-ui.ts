@@ -1,6 +1,14 @@
 import type { GuardianTier } from "@/types/domain";
 
-type BadgeVariant = "default" | "secondary" | "destructive" | "outline" | "ghost" | "link";
+type BadgeVariant =
+  | "default"
+  | "secondary"
+  | "trust"
+  | "featured"
+  | "destructive"
+  | "outline"
+  | "ghost"
+  | "link";
 
 export function guardianTierLabel(tier: GuardianTier): string {
   const map: Record<GuardianTier, string> = {
@@ -25,7 +33,7 @@ export function guardianTierBadgeVariant(tier: GuardianTier): BadgeVariant {
     case "verified_guardian":
       return "default";
     case "active_guardian":
-      return "secondary";
+      return "trust";
     default:
       return "outline";
   }

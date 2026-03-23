@@ -11,7 +11,9 @@ export function BookingProgress({ currentStep }: Props) {
     <div className="w-full">
       <div className="text-muted-foreground mb-3 flex items-center justify-between text-xs font-medium">
         <span>Step {currentStep + 1} of {BOOKING_STEP_LABELS.length}</span>
-        <span className="text-primary">{Math.round(((currentStep + 1) / BOOKING_STEP_LABELS.length) * 100)}%</span>
+        <span className="bg-[linear-gradient(90deg,var(--brand-primary),var(--brand-trust-blue))] bg-clip-text font-semibold text-transparent">
+          {Math.round(((currentStep + 1) / BOOKING_STEP_LABELS.length) * 100)}%
+        </span>
       </div>
       <div
         className="bg-muted mb-4 h-2 overflow-hidden rounded-full"
@@ -22,7 +24,7 @@ export function BookingProgress({ currentStep }: Props) {
         aria-label="Booking progress"
       >
         <div
-          className="bg-primary h-full rounded-full transition-all duration-300 ease-out"
+          className="bg-booking-progress-fill h-full rounded-full transition-all duration-300 ease-out shadow-[0_0_12px_color-mix(in_srgb,var(--brand-primary)_45%,transparent)]"
           style={{
             width: `${((currentStep + 1) / BOOKING_STEP_LABELS.length) * 100}%`,
           }}
@@ -46,7 +48,7 @@ export function BookingProgress({ currentStep }: Props) {
                 className={cn(
                   "flex size-6 shrink-0 items-center justify-center rounded-full text-[10px]",
                   done && "bg-primary/15 text-primary",
-                  active && "bg-primary text-primary-foreground ring-2 ring-primary/30",
+                  active && "bg-primary text-primary-foreground ring-2 ring-[var(--brand-trust-blue)]/35",
                   !done && !active && "bg-muted text-muted-foreground",
                 )}
               >

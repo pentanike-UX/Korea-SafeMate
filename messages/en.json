@@ -1,0 +1,224 @@
+{
+  "Nav": {
+    "explore": "Explore",
+    "guardians": "Guardians",
+    "services": "Services",
+    "book": "Book",
+    "contribute": "Contribute"
+  },
+  "Header": {
+    "logIn": "Log in",
+    "bookSupport": "Book support",
+    "openMenu": "Open menu",
+    "menu": "Menu"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "en": "EN",
+    "ko": "KO",
+    "ja": "JA"
+  },
+  "Footer": {
+    "product": "Product",
+    "guardians": "Guardians",
+    "operations": "Operations",
+    "apply": "Apply",
+    "dashboard": "Dashboard",
+    "admin": "Admin",
+    "disclaimer": "Companion support only. Not medical, legal, or emergency services. No claim of 24/7 protection or guaranteed safety. By using Korea SafeMate you acknowledge these limits."
+  },
+  "Brand": {
+    "tagline": "Local intelligence · Guardian community · Safe support",
+    "description": "Practical local information, a contributor Guardian community with clear tiers, and ops-gated matching for on-the-ground support — not generic tourism marketing or a forum free-for-all."
+  },
+  "Home": {
+    "metaTitle": "Home",
+    "metaDescription": "Trustworthy local intelligence and calm, scoped support from Korea SafeMate — regions, Guardians, and booking.",
+    "eyebrow": "Korea · inbound & local discovery",
+    "heroTitle": "Trustworthy local intelligence and calm, scoped support.",
+    "heroLead": "{brand} combines moderated regional intel, a tiered Guardian community with mutual reviews, and ops-gated matching for practical help — for foreign visitors and Korean users exploring domestically. Not a forum dump or generic tour marketplace.",
+    "exploreRegions": "Explore regions",
+    "bookSupport": "Book support",
+    "services": "Services",
+    "scopeNote": "Not emergency response, medical, or legal advice. Scope and exclusions are shown before you book.",
+    "layersTitle": "Three layers, one platform",
+    "layersLead": "Open participation for intel; separate verification for matching; external chat handoff in the MVP — clarity over hype.",
+    "layer1Title": "Local travel intelligence",
+    "layer1Body": "Region-scoped tips, hot places, and practical arrival mechanics — vivid and specific, moderated for quality.",
+    "layer2Title": "Guardian community & reputation",
+    "layer2Body": "Open contribution with tier rules; activity and mutual reviews build trust signals separate from matching eligibility.",
+    "layer3Title": "Safe companion matching",
+    "layer3Body": "Verified Guardians only after review + policy checks; early coordination uses external chat handoff — no full in-app chat MVP.",
+    "sessionsTitle": "Support sessions",
+    "sessionsLead": "Arrival, K-route execution, and first-day adaptation — scoped companion help, not licensed tour commentary.",
+    "startBooking": "Start booking →",
+    "ctaTitle": "Ready to reduce first-day friction?",
+    "ctaLead": "Tell us your arrival window and needs. Our team reviews every request and matches a Guardian when availability aligns.",
+    "bookNow": "Book now"
+  },
+  "Services": {
+    "metaTitle": "Services",
+    "metaDescription": "Arrival, K-Route, and First 24 Hours companion support in Seoul.",
+    "title": "Companion services",
+    "intro": "Fixed-scope support sessions. Pricing shown is indicative for MVP planning — final quotes may vary by distance and timing.",
+    "fromPrice": "From {price}",
+    "selectBook": "Select & book",
+    "durationBadge": "~{hours}h",
+    "cards": {
+      "arrival": {
+        "title": "Arrival Companion",
+        "shortDescription": "From airport or station to your accommodation — transit basics and check-in support.",
+        "bullets": [
+          "Airport or major station to your stay",
+          "T-money / SIM basics and first navigation",
+          "Check-in support and simple local setup"
+        ]
+      },
+      "k_route": {
+        "title": "K-Route Companion",
+        "shortDescription": "Execution support for K-content related places you choose — not professional tour guiding.",
+        "bullets": [
+          "Visit K-content related spots you already chose",
+          "Route execution: tickets, queues, ordering, directions",
+          "Practical help — not scripted tourism commentary"
+        ]
+      },
+      "first_24h": {
+        "title": "First 24 Hours",
+        "shortDescription": "First-day adaptation: transit, apps, food ordering, and settling in with realistic scope.",
+        "bullets": [
+          "First-day adaptation in Korea",
+          "Apps, transit, food ordering basics",
+          "Settling-in support with realistic scope"
+        ]
+      }
+    }
+  },
+  "Explore": {
+    "metaTitle": "Explore",
+    "metaDescription": "Region-based local intelligence — moderated, practical, Guardian-grounded.",
+    "eyebrow": "Explore",
+    "heroTitle": "Real local intelligence — before you book",
+    "heroDescription": "Explore is curated for decisions: hot places, food queues, K-content execution, shopping mechanics, and practical arrival tips. Most insights come from Guardians with visible tiers and contribution history — not generic blog posts or open forums.",
+    "heroNote": "We gather practical information for both Korean and international readers. The aim is Guardian-reviewed clarity — not machine translation.",
+    "jumpIntel": "Jump to intel",
+    "bookSupport": "Book support",
+    "regionSectionTitle": "Browse by region",
+    "regionSectionLead": "Phase 1 metros first — structure ready for Phase 2 destinations.",
+    "phase": "Phase {n}",
+    "openHub": "Open hub",
+    "jumpToIntel": "Jump to intel",
+    "featuredTitle": "Featured Guardians",
+    "featuredLead": "Trusted locals and seed partners — highlighted for quality, not pay-to-play ads.",
+    "viewProfile": "View profile",
+    "influencerSeed": "Seed partner",
+    "ctaTitle": "Ready for the next step?",
+    "ctaLead": "Browse intel first — then book scoped support or start contributing as a Guardian.",
+    "becomeGuardian": "Become a Guardian",
+    "guardianProfiles": "Guardian profiles",
+    "backToExplore": "← Explore home",
+    "bookInArea": "Book support in this area",
+    "contributeIntel": "Contribute intel",
+    "backLink": "Back to Explore",
+    "allRegions": "← All regions",
+    "regionHubTagsTitle": "Tags & topics in this hub",
+    "regionHubTagsLead": "Filter posts below — same categories as the national Explore view.",
+    "moderationPreviewTitle": "In moderation (preview)",
+    "moderationPreviewLead": "Shown for ops alignment — travelers normally see approved posts only.",
+    "regionGuardiansTitle": "Guardian highlights · this region",
+    "regionGuardiansLead": "Active and verified tiers reflect contribution and separate verification — not hype.",
+    "fullProfile": "Full profile",
+    "posts30dOnly": "{count} posts / 30d",
+    "travelerAvgLine": "{rating} avg traveler rating"
+  },
+  "Book": {
+    "metaTitle": "Book",
+    "metaDescription": "Request trusted local support — reviewed before matching.",
+    "eyebrow": "Support request",
+    "title": "Request trusted local support",
+    "intro": "This is a calm, structured intake — not a one-click tour checkout. Share accurate context so we can match you thoughtfully. External chat is only introduced after our team approves scope and a Guardian fit.",
+    "loading": "Loading…"
+  },
+  "TrustScope": {
+    "title": "Service scope & boundaries",
+    "lead": "Korea SafeMate provides practical companion support. We are not a licensed tour operator, medical provider, legal advisor, or emergency service. We do not guarantee outcomes or \"full responsibility\" for your safety.",
+    "includedLabel": "Typically includes",
+    "excludedLabel": "Not included",
+    "included": [
+      "Curated local intel and moderated posts by region",
+      "Guardian reputation from contribution + mutual reviews",
+      "Practical companion sessions with clear scope (arrival, routes, first hours)",
+      "External chat handoff (Telegram, KakaoTalk, WhatsApp, etc.) once matched"
+    ],
+    "excluded": [
+      "Generic brochure marketing or unmoderated forum chaos",
+      "Automatic matching privileges from post volume alone",
+      "Medical, legal, or emergency response claims",
+      "First-party real-time chat platform (MVP uses external channels)"
+    ]
+  },
+  "BookingSuccess": {
+    "title": "Request submitted",
+    "body": "Thank you. Our team will review your context and availability. You are not connected to a Guardian or external chat yet — we will email you at {email} with next steps when matching is ready.",
+    "bodyNoEmail": "Thank you. Our team will review your context and availability. You are not connected to a Guardian or external chat yet — we will contact you with next steps when matching is ready.",
+    "reference": "Reference:",
+    "mvpNote": "(MVP: not saved to database — configure Supabase for persistence.)",
+    "service": "Service:",
+    "handoff": "Handoff:",
+    "summaryUnavailableTitle": "Summary unavailable",
+    "summaryUnavailableBody": "Open this page from the same browser session right after submitting, or keep your reference ID for support.",
+    "summaryUnavailableHint": "If you refreshed or opened in another device, details are not stored client-side.",
+    "exploreIntel": "Explore local intel",
+    "services": "Services",
+    "home": "Home"
+  },
+  "Login": {
+    "metaTitle": "Log in",
+    "title": "Log in",
+    "description": "Authentication is not wired in this MVP build. Use public pages and role dashboards for UI preview only.",
+    "continueEmail": "Continue with email (soon)",
+    "browseExplore": "Browse Explore",
+    "continueBooking": "Continue to booking flow",
+    "previewGuardian": "Preview Guardian dashboard",
+    "previewAdmin": "Preview Admin"
+  },
+  "GuardiansPage": {
+    "metaTitle": "Guardians",
+    "metaDescription": "Tiers, reputation, and featured locals — open participation ≠ trusted matching.",
+    "startContributing": "Start contributing",
+    "requestSupport": "Request matched support"
+  },
+  "ExploreDiscovery": {
+    "sectionTitle": "Discover local intel",
+    "sectionLead": "Structured by category and region — moderated for usefulness, not feed noise.",
+    "featuredPicks": "Featured picks",
+    "category": "Category",
+    "region": "Region",
+    "sort": "Sort",
+    "all": "All",
+    "allRegions": "All regions",
+    "sortRecommended": "Recommended",
+    "sortLatest": "Latest",
+    "sortPopular": "Popular",
+    "emptyFilters": "No posts match these filters. Try another category or region."
+  },
+  "ExploreInsightCard": {
+    "bookSupport": "Book support",
+    "featuredPick": "Featured pick",
+    "contributor": "Contributor",
+    "guardian": "Guardian",
+    "approved30d": "{count} approved / 30d",
+    "travelerAvg": "{rating} traveler avg",
+    "helpful": "{rating} helpful",
+    "usefulVotes": "{count} found this useful",
+    "bookmark": "Bookmark",
+    "share": "Share",
+    "contributorHint": "Community contributor",
+    "bookmarkTodo": "Bookmarks — TODO(prod): Supabase + RLS per user",
+    "shareTodo": "Share — TODO(prod): Web Share API + OG URLs"
+  },
+  "GuardianDashboard": {
+    "homePublic": "Home",
+    "viewGuardians": "View public guardian context"
+  }
+}

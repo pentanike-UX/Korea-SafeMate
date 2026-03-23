@@ -1,3 +1,4 @@
+/* TODO(i18n): Admin remains English-first; localize via dedicated namespaces when needed. */
 import Link from "next/link";
 import {
   mockBookings,

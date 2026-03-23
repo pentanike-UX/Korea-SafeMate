@@ -1,25 +1,26 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/button";
 
-export function ExploreCtas() {
+export async function ExploreCtas() {
+  const t = await getTranslations("Explore");
+
   return (
-    <section className="bg-muted/30 border-y">
+    <section className="border-y border-border/60 bg-gradient-to-r from-[var(--brand-primary-soft)]/35 via-[var(--brand-trust-blue-soft)]/25 to-[var(--brand-primary-soft)]/30">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div>
-          <p className="text-foreground text-sm font-medium">Ready for the next step?</p>
-          <p className="text-muted-foreground mt-1 max-w-lg text-sm leading-relaxed">
-            Browse intel first — then book scoped support or start contributing as a Guardian.
-          </p>
+          <p className="text-foreground text-sm font-medium">{t("ctaTitle")}</p>
+          <p className="text-muted-foreground mt-1 max-w-lg text-sm leading-relaxed">{t("ctaLead")}</p>
         </div>
         <div className="flex flex-col gap-2 sm:flex-row sm:shrink-0">
           <Button asChild className="rounded-xl">
-            <Link href="/book">Book support</Link>
+            <Link href="/book">{t("bookSupport")}</Link>
           </Button>
           <Button asChild variant="outline" className="rounded-xl">
-            <Link href="/guardians/apply">Become a Guardian</Link>
+            <Link href="/guardians/apply">{t("becomeGuardian")}</Link>
           </Button>
           <Button asChild variant="ghost" className="rounded-xl">
-            <Link href="/guardians">Guardian profiles</Link>
+            <Link href="/guardians">{t("guardianProfiles")}</Link>
           </Button>
         </div>
       </div>

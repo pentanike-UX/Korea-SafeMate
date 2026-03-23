@@ -1,6 +1,7 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { useMemo, useState } from "react";
 import { mockRegions, mockServiceTypes } from "@/data/mock";
 import type { ServiceTypeCode } from "@/types/domain";
@@ -19,7 +20,7 @@ import { wizardStateToPayload } from "@/lib/booking-submit";
 import { BookingFlowScopePanel } from "@/components/booking/booking-flow-scope-panel";
 import { BookingProgress } from "@/components/booking/booking-progress";
 import { BookingSummaryCard } from "@/components/booking/booking-summary-card";
-import { TrustBoundaryCard } from "@/components/trust/trust-boundary-card";
+import { TrustBoundaryCardClient } from "@/components/trust/trust-boundary-card-client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -552,7 +553,7 @@ export function BookingWizard() {
       </div>
 
       <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-        <TrustBoundaryCard />
+        <TrustBoundaryCardClient />
         <p className="text-muted-foreground text-xs leading-relaxed">
           {/* TODO(prod): Rate limiting, bot protection, and PII encryption for `request_payload`. */}
           Submissions are sent to our API. When Supabase is configured, rows are stored for admin matching;
